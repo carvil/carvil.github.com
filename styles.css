@@ -1,0 +1,37 @@
+.hover {
+	cursor: auto
+}
+
+nav {
+    border-top: 3px solid #0099ff;
+}
+
+
+nav ul {
+    list-style: none;
+	padding: 0;
+	margin-top: 150px;
+}
+
+nav ul li {
+    margin: 1em;
+	display: inline;
+}
+
+h1.fontface {
+	font: 60px/68px 'DroidSansMonoRegular', Arial, sans-serif;letter-spacing: 0;
+	margin-top: 150px;
+
+}
+
+p.style1 {font: 18px/27px 'DroidSansMonoRegular', Arial, sans-serif;}
+		
+#container {
+	text-align: center;
+	margin: 0 auto;
+}
+
+img {
+	border-style: none;
+}
+
