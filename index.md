@@ -11,7 +11,7 @@ title: Blog
   <div class="article">
     {{ post.date | date_to_string }}
     <hr>
-    <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+    <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
     {{ post.content }}
   </div>
 {% endfor %}
