@@ -68,4 +68,13 @@ body {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-	
+
+section.main {
+  position: relative;
+}
+
+section.coderwall {
+  position: absolute;
+  top: 0px;
+  left: 800px;
+}
