@@ -6,21 +6,21 @@ tags: ["hashell", "project euler", "cryptography"]
 ---
 {% include JB/setup %}
 
-[This](http://projecteuler.net/index.php?section=problems&id=59) problem is
+[Project Euler's problem 59](http://projecteuler.net/index.php?section=problems&id=59) is
 about breaking the [XOR cipher](http://en.wikipedia.org/wiki/XOR_cipher) using
 only the cipher text and having the following information:
 
-  * The key used to encrypt the original text has length 3;
-  * The key contains lower case characters.
+- The key used to encrypt the original text has length 3;
+- The key contains lower case characters.
 
 In such a simple encryption algorithm, it is actually possible to find the
 original text and the key by brute-force all combinations, however I decided
 to try something else. It is possible to find the key by doing the following:
 
-  1. First divide the cypher characters into three groups depending on which key character they were encoded from;
-  2. Create a distribution of the elements of each group;
-  3. Take the first element of each distribution;
-  4. XOR those elements with the most used English character (the space, according to wikipedia).
+1. First divide the cypher characters into three groups depending on which key character they were encoded from;
+2. Create a distribution of the elements of each group;
+3. Take the first element of each distribution;
+4. XOR those elements with the most used English character (the space, according to wikipedia).
 
 Imagining that the key is "KEY", then for a given plain text, the key repeats
 itself until the end. So, for a given plain text INPUTTEXT, the character "K"
@@ -39,9 +39,15 @@ mentioned above:
     isolate l =
       let size = length l
           tmp  = f (size-1)
-          l1   = [ (!!) l (i-1) | i <- [ 3*j+1 | j <- [0..tmp] ]]
-          l2   = [ (!!) l (i-1) | i <- [ 3*j-1 | j <- [1..tmp] ]]
-          l3   = [ (!!) l (i-1) | i <- [ 3*j   | j <- [1..tmp] ]]
+          l1   = [ (!!) l (i-1) | 
+                    i <- [ 3*j+1 | 
+                    j <- [0..tmp] ]]
+          l2   = [ (!!) l (i-1) | 
+                    i <- [ 3*j-1 | 
+                    j <- [1..tmp] ]]
+          l3   = [ (!!) l (i-1) | 
+                    i <- [ 3*j | 
+                    j <- [1..tmp] ]]
       in (select1 l1, select1 l2,select1 l3)
      where f :: Int -> Int
            f n = fromInteger $ round $ fromIntegral n/3
@@ -90,7 +96,8 @@ obtain the plain text. For that, I used the following function:
        in map chr k
       where
         xor_list [] [] = []
-        xor_list (x:xs) (y:ys) = (x `xor_int` y) : xor_list xs ys
+        xor_list (x:xs) (y:ys) = 
+           (x `xor_int` y) : xor_list xs ys
 {% endhighlight %}
 
 And the result is: "(The Gospel of John, chapter 1) 1 In the beginning the
