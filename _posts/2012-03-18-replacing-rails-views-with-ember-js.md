@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Replacing rails views with ember.js (dashit.herokuapp.com)"
+title: "Replacing rails views with ember.js"
 category: Programming
 tags: ["ruby", "rails", "ember.js", "coffeescript"]
 ---
