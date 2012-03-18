@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Replacing rails views with ember.js (dashit.herokuapp.com)"
+title: "Replacing rails views with ember.js (dash-it-app.herokuapp.com)"
 category: Programming
 tags: ["ruby", "rails", "ember.js", "coffeescript"]
 ---
@@ -19,7 +19,7 @@ After seeing a number of tutorials and examples, I decided to build an app which
 the the fact that it is not necessary to download a new page every time a user interacts with the server. I built a simple todo list that allows one to create projects 
 and a list of todos per project. The projects page is almost entirely done using ember.js.
 
-You can either try it online ([http://dashit.herokuapp.com](http://dashit.herokuapp.com)) or download the code and try it locally ([http://github.com/carvil/dash-it](http://github.com/carvil/dash-it)). 
+You can either try it online ([http://dash-it-app.herokuapp.com](http://dash-it-app.herokuapp.com)) or download the code and try it locally ([http://github.com/carvil/dash-it](http://github.com/carvil/dash-it)). 
 
 Disclaimer: this is my first experience with client side MVC frameworks and therefore I am not an expert in the matter. Thus, I kindly ask you to take it with a grain of salt.
 
