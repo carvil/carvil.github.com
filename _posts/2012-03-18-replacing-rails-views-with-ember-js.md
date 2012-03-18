@@ -6,8 +6,6 @@ tags: ["ruby", "rails", "ember.js", "coffeescript"]
 ---
 {% include JB/setup %}
 
-### Motivation
-
 In the past year or so, there has been a lot of discussions about client side javascript model-view-controller (MVC) frameworks. In this category, both
 [backbone.js](http://documentcloud.github.com/backbone/) and [ember.js](http://emberjs.com/) have been particularly in focus. They both have in common the
 interest in providing structure and architecture to web applications and also to allow one to build rich user interfaces.
