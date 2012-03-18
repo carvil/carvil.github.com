@@ -72,3 +72,4 @@ much more readable than this:
 ### Conclusion
 
 Ember.js has proven to be a very interesting framework. One can build great applications with it, and the integration with rails makes it even easier. However, since it's still in its early days, there is still not a lot of documented examples on how to use it or which are the best practices to follow. It is a trial and error process, however, one that is worth the time and effort.
+
