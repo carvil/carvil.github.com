@@ -55,7 +55,7 @@ Hopefully, if the assumptions are correct, one will get reasonable results. I tr
 
 ### What not to do
 
-Along the way, I experienced some problems. For example, one has to be careful with the words one chooses to use. Initially, I was considering words such as *technology* and *iphone*, which are present in many websites, regardless of the nature of the websites. For example, news websites such as bbc.co.uk and guardian.co.uk were false positives when using such words. 
+Along the way, I experienced some problems. For example, one has to be careful with the words one chooses to use. Initially, I was considering words such as *technology*, *iphone* and *method*, which are present in many websites, regardless of the nature of the websites. For example, news websites such as bbc.co.uk and guardian.co.uk were false positives when using such words. 
 
 It is also important to havegood test data, otherwise the results won't be accurate (or will be accurate in relation to the testing data, but meaningless towards what we are trying to classify).
 
@@ -72,3 +72,4 @@ I tested with sites such as wired and ycombinator; blogs such as github, heroku 
 My gut feeling is that with proper training data and better keywords, one could expect much better results and therefore achieve a better classification score.
 
 Working with ANNs was a good experience and I will keep them in mind for future classification problems.
+
