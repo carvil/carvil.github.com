@@ -2,7 +2,7 @@
 layout: post
 title: "Automatic page classification using artificial neural networks (classifyit.herokuapp.com)"
 category: Programming
-tags: ["ruby","sinatra","neural networks","classification"]
+tags: ["ruby", "sinatra", "ann", "classification"]
 ---
 {% include JB/setup %}
 
