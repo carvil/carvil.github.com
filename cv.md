@@ -10,7 +10,14 @@ group: navigation
 
 ###August 2011 - Present: Software Engineer at Digital Science, London
 
-Software Engineer on the infrastructure team, working with a number of different technologies building both products and infrastructure tools. 
+Full stack software engineer working on the central department building both applications and infrastructure automation tools.
+
+- Languages/Frameworks/APIs: ruby, rails, sinatra, eventmachine, amqp, python, coffeescript, javascript, twitter bootstrap, google chrome api, oauth2;
+- Messaging: rabbitmq;
+- DBs: mysql, riak, redis;
+- Tools/Infrastructure: AWS, chef, git, github, jenkins;
+- OSs: mac os x, linux (ubuntu);
+- Testing: rspec, capybara, jasmine.
 
 ### January 2011 - August 2011: Software Developer at Mobile Interactive Group, London
 
