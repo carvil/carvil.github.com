@@ -58,7 +58,7 @@ Research paper presented at Formal Methods 2008, in Turku, Finland. The paper ca
 
 ### 10/2007 – 07/2008: 2nd year of MSc in Computing Science degree in the Engineering College of Aarhus, Denmark. Final MSc degree mark: 16 (in a scale from 0 to 20).
 
-- Thesis theme: Connecting between VDM++ and Java Modelling Language for the Overture Tool (available [here](http://www.overturetool.org/twiki/pub/Main/OverturePublications/ConnectingVDMppJML.pdf"))
+- Thesis theme: Connecting between VDM++ and Java Modelling Language for the Overture Tool (available [here](http://www.overturetool.org/twiki/pub/Main/OverturePublications/ConnectingVDMppJML.pdf))
 - Supervisor: Professor Peter Gorm Larsen, Engineering College of Aarhus.
 - Co-supervisor: Professor Luís Soares Barbosa, University of Minho.
 - Main subjects: Formal Methods, Tool Support, Software Modelling, Object-Oriented Paradigm, Problem Solving, Software Development.
