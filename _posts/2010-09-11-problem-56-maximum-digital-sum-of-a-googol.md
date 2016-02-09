@@ -2,7 +2,7 @@
 layout: post
 title: "Maximum digital sum of a googol"
 category: Programming
-tags: ["hashell", "project euler"]
+tags: ["hashell", "project_euler"]
 ---
 {% include JB/setup %}
 
@@ -13,10 +13,10 @@ just created a brute force algorithm in Haskell:
 {% highlight haskell %}
     import List
     import Char
-    
+
     result = maximum [g (a^b) | a <- [1..99], b <- [1..99]]
       where g = sum . map digitToInt . show
-    
+
     main = print $ result
 {% endhighlight %}
 

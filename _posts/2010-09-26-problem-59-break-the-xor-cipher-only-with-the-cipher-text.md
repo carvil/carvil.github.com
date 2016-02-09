@@ -2,11 +2,11 @@
 layout: post
 title: "Break the XOR cipher only with the cipher text"
 category: Programming
-tags: ["hashell", "project euler", "cryptography"]
+tags: ["hashell", "project_euler", "cryptography"]
 ---
 {% include JB/setup %}
 
-[Project Euler's problem 59](http://projecteuler.net/index.php?section=problems&id=59) is
+[project_euler's problem 59](http://projecteuler.net/index.php?section=problems&id=59) is
 about breaking the [XOR cipher](http://en.wikipedia.org/wiki/XOR_cipher) using
 only the cipher text and having the following information:
 
@@ -34,19 +34,19 @@ the step 3 with the space (ascii code 32) and we obtain the key. Then it is
 just a matter of decoding the text using that key. Translating this process
 into Haskell, I wrote the following function to perform the first 2 steps
 mentioned above:
-   
+
 {% highlight haskell %}
     isolate l =
       let size = length l
           tmp  = f (size-1)
-          l1   = [ (!!) l (i-1) | 
-                    i <- [ 3*j+1 | 
+          l1   = [ (!!) l (i-1) |
+                    i <- [ 3*j+1 |
                     j <- [0..tmp] ]]
-          l2   = [ (!!) l (i-1) | 
-                    i <- [ 3*j-1 | 
+          l2   = [ (!!) l (i-1) |
+                    i <- [ 3*j-1 |
                     j <- [1..tmp] ]]
-          l3   = [ (!!) l (i-1) | 
-                    i <- [ 3*j | 
+          l3   = [ (!!) l (i-1) |
+                    i <- [ 3*j |
                     j <- [1..tmp] ]]
       in (select1 l1, select1 l2,select1 l3)
      where f :: Int -> Int
@@ -71,9 +71,9 @@ the key:
 {% highlight haskell %}
     xor_int :: Int -> Int -> Int
     xor_int a b = a `xor` b
-    
+
     get_key l = map (chr . xor_int 32) l
-    
+
     *Main> get_key [71,79,68]
     "god"
 {% endhighlight %}
@@ -89,14 +89,14 @@ obtain the plain text. For that, I used the following function:
       where
         parseList :: String -> IO [Int]
         parseList = readIO
-    
+
     decode key text =
        let l = take (length text) (cycle key)
            k = xor_list text l
        in map chr k
       where
         xor_list [] [] = []
-        xor_list (x:xs) (y:ys) = 
+        xor_list (x:xs) (y:ys) =
            (x `xor_int` y) : xor_list xs ys
 {% endhighlight %}
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Determine online banking password based on successful attempts"
 category: Programming
-tags: ["project euler"]
+tags: ["project_euler"]
 ---
 {% include JB/setup %}
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Determining the most efficient way to connect a network"
 category: Programming
-tags: ["java", "project euler"]
+tags: ["java", "project_euler"]
 ---
 {% include JB/setup %}
 
@@ -17,25 +17,25 @@ creating a class to represent the graph. My representation uses an adjacency
 matrix, however for space-saving purpose I could have used adjacency lists
 instead.
 
-{% highlight java %}    
+{% highlight java %}
     public class Graph {
-    
+
     	public int nvertices;
     	public int[][] edges;
-    
+
             ...
 {% endhighlight %}
 
 Then I created a Prim's class which has a method to calculate the minimum
 spanning tree of a given graph. The method, named prim, is explained below
 together with the class:
-    
+
 {% highlight java %}
     public class Prim {
-    
+
       public Graph g;
       public int start;
-    
+
       private final int MAXINT = Integer.MAX_VALUE;
       private int[] distance;
       private int[] parent;
@@ -56,7 +56,7 @@ very important variables for the prim's method below:
       int nVertices = this.g.getNvertices();
       //Current elements in the final tree
       boolean[] intree = new boolean[nVertices];
-    
+
       //Initialization of the arrays
       for (i=0; i < nVertices; i++) {
         intree[i] = false;
@@ -73,11 +73,11 @@ responsible for creating the MST and calculate the total saved:
       //Starting point
       this.distance[this.start] = 0;
       v = this.start;
-    
+
       //Loop through the vertices
       while(intree[v] == false) {
         intree[v] = true;
-    
+
         // Search all adjacent nodes and update distances
         for(int j=0; j<nVertices; j++) {
           weight = this.g.edges[v][j];
@@ -93,7 +93,7 @@ responsible for creating the MST and calculate the total saved:
     	       save += weight;
           }
         }
-    
+
         //Find out next vertice to explore
         v = 0;
         dist = this.MAXINT;
@@ -105,7 +105,7 @@ responsible for creating the MST and calculate the total saved:
     	}
         }
       }
-    
+
       //Return the total saved
       return save;
 {% endhighlight %}

@@ -2,7 +2,7 @@
 layout: post
 title: "Optimizing the ackermann function using haskell"
 category: Programming
-tags: ["hashell", "project euler"]
+tags: ["hashell", "project_euler"]
 ---
 {% include JB/setup %}
 
@@ -11,10 +11,10 @@ optimization of the [Ackermann function](http://en.wikipedia.org/wiki/Ackermann_
 even with very low numbers. It is not a primitive recursive function, however
 it is a total recursive function. Here is the simplest Haskell definition of
 it:
-   
+
 {% highlight haskell %}
     module Ackermann (ackermann) where
-    
+
     ackermann m n | m == 0 = n+1
                   | m > 0 && n == 0 = ackermann (m-1) 1
                   | m > 0 && n > 0 = ackermann (m-1) (ackermann m (n-1))
@@ -28,7 +28,7 @@ example, if both _n_ and _m_ are greater than zero, the function has a double
 recursion, which is very consuming both in terms of time and resources. There
 are of course many possibilities for optimizing this function: using fix
 point, memoization (by using a state monad) or non-recursively by means of the
-[Knuth's up-arrow notation](http://en.wikipedia.org/wiki/Knuth's_up-arrow_notation). 
+[Knuth's up-arrow notation](http://en.wikipedia.org/wiki/Knuth's_up-arrow_notation).
 In further articles I will try each one of those
 optimizations and see if I can compute the Ackermann function with m=6 and n=6
 :-)

@@ -2,7 +2,7 @@
 layout: post
 title: "Problem 22"
 category: Programming
-tags: ["haskell", "project euler"]
+tags: ["haskell", "project_euler"]
 ---
 {% include JB/setup %}
 
@@ -17,11 +17,11 @@ and finally I applied a number of functions to that list of strings.
 
 {% highlight haskell %}
     import List
-    
+
     main = do x <- readFile "names.txt"
               y <- readNames x
               print ((foldr (+) 0 . values 1 . sort) y)
-    
+
     readNames :: String -> IO [String]
     readNames = readIO
 {% endhighlight %}
@@ -38,9 +38,9 @@ sum the list of integers. Below one can find the rest of the functions:
     values :: Int -> [String] -> [Int]
     values _ [] = []
     values n (x:xs) = (n * (value x)) : values (n+1) xs
-    
+
     value = foldr (+) 0 . map getPosition
-    
+
     getPosition x = case (elemIndex x ['A','B'..'Z']) of
                      Nothing -> 0
                      Just n -> n+1
